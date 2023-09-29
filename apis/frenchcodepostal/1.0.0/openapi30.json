@@ -1,0 +1,63 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "FrenchCodePostal",
+    "description" : "Aucune description",
+    "contact" : { },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "http://COSTAL01TSTP.tvhconsulting.local:8040/services/codePostal"
+  } ],
+  "paths" : {
+    "/getAll" : {
+      "get" : {
+        "summary" : "getAll",
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDepartement" : {
+      "get" : {
+        "summary" : "getDepartement",
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/test" : {
+      "get" : {
+        "summary" : "test",
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getVilleByCodePostal" : {
+      "get" : {
+        "summary" : "getVileByCodePostal",
+        "parameters" : [ {
+          "name" : "CodePostal",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "13010"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    }
+  }
+}
